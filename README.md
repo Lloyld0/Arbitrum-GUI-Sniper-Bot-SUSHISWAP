@@ -1,26 +1,25 @@
 
 # Arbitrum Sniper Bot
 
-This bot allow you to buy any coin on arbitrum. You can snipe the token to buy automaticaly at the second where the liquidity is added to sushiswap
+This bot allows you to buy any coin on Arbitrum. You can snipe the token automatically at the exact moment when liquidity is added to Sushiswap.
 
-> This is an open source version of the original TheRockBot you can use for free
+> This is an open source version of the original TheRockBot you can use it for free
 
-
+# Website
+https://therockbot.co/
 
 # Full documentation 
 
-This is the original documentation
+Original documentation
 https://doc.therockbot.co/
 
-## Wy is it free ?
-Originally the bot was paid but it is hard to manage order, en ensure support.
-For now it become free to use just include a really small fee on transaction.
+## Why is it free ?
+Originally, the bot was paid, but it was hard to manage orders and ensure support. Now, it has become free to use, with just a very small fee included on transactions.
 
-### Transparency 
-For example if you buy for 30$ of a token you will get 0.4$ of fee 
-If you buy for 140$ of a token you will get 2$ of fee 
+### Example 
+For example, if you buy $30 worth of a token, you will incur a fee of $0.4. If you buy $140 worth of a token, you will incur a fee of $2 not $4.
 
-more you buy less are the fee, this is just to support the dev bot. Glade if you can continue to participate 
+The more you buy, the lower the fees will be. This is simply to support the development of the bot. We would be glad if you continued to participate.
 
 
 ## Screenshots
