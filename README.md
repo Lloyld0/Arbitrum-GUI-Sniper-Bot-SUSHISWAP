@@ -10,7 +10,9 @@ https://therockbot.co/
 
 # Full documentation 
 
-Original documentation
+Just run `python3 trb_sushiswap.py`
+
+Get installation and all information on the full documentation
 https://doc.therockbot.co/
 
 ## Why is it free ?
