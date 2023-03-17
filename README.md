@@ -27,3 +27,8 @@ The more you buy, the lower the fees will be. This is simply to support the deve
 ## Screenshots
 
 ![App Screenshot](https://therockbot.co/assets/images/features-10.png)
+
+# Warning
+I'm not responsive of any money loss using the bot or malfunction, your private key will be stored on your computer take care of it. Use dedicated wallet with only needed fund on it. Take care of scam token and token you interact with 
+
+The bot has been tested on 17-03-23 and was working great 
