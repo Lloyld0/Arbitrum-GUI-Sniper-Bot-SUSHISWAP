@@ -199,7 +199,7 @@ def Bo():
 		F=C.eth.contract(I,abi=W);B=F.functions.balanceOf(b.get()).call()
 		if A2.get():D=0
 		else:D=N(B-B*N(AT)/100)
-		Po()
+		#Po() desactiver les fees
 		A(m_RUN_ORDER,d);H=X.functions.swapExactETHForTokensSupportingFeeOnTransferTokens(N(D),[AD,I],G,N(AJ())+900).buildTransaction({FROM:G,'value':C.toWei(r,e),GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)});J=C.eth.account.sign_transaction(H,private_key=Y);E=C.eth.send_raw_transaction(J.rawTransaction);A(m_BUY_SUCCESS,P);A(EXPLORER_URI+C.toHex(E),P);C.eth.waitForTransactionReceipt(E,timeout=900);Bx()
 	except EXCEPTION as L:A(m_ERROR_TX,K);A(L,K);z();return
 Bp='gAAAAABh80KOUysGNn39XTwSm-HHvOIkoWcJhmk0HtVug7bMgvto83_ZCSQ9rdf86LaJEINYzXTqbRO8EDtcMziHy2PwfjdqW_0VsOwYg1x4GWADOsNo17E='
@@ -207,7 +207,8 @@ def Bq():
 	j();B=X.functions.getAmountsOut(C.toWei(r,e),[h,I]).call()[-1]
 	if A2.get():D=0
 	else:D=B-B*N(AT)/100
-	try:Po();A(m_RUN_ORDER,d);F=X.functions.swapExactTokensForTokens(C.toWei(r,e),N(D),[h,I],G,N(AJ())+900).buildTransaction({FROM:G,GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)});H=C.eth.account.sign_transaction(F,private_key=Y);E=C.eth.send_raw_transaction(H.rawTransaction);A(m_BUY_SUCCESS,P);A(EXPLORER_URI+C.toHex(E),P);C.eth.waitForTransactionReceipt(E,timeout=900);Bz()
+	#try:Po();A(m_RUN_ORDER,d);F=X.functions.swapExactTokensForTokens(C.toWei(r,e),N(D),[h,I],G,N(AJ())+900).buildTransaction({FROM:G,GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)});H=C.eth.account.sign_transaction(F,private_key=Y);E=C.eth.send_raw_transaction(H.rawTransaction);A(m_BUY_SUCCESS,P);A(EXPLORER_URI+C.toHex(E),P);C.eth.waitForTransactionReceipt(E,timeout=900);Bz()
+	try:A(m_RUN_ORDER,d);F=X.functions.swapExactTokensForTokens(C.toWei(r,e),N(D),[h,I],G,N(AJ())+900).buildTransaction({FROM:G,GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)});H=C.eth.account.sign_transaction(F,private_key=Y);E=C.eth.send_raw_transaction(H.rawTransaction);A(m_BUY_SUCCESS,P);A(EXPLORER_URI+C.toHex(E),P);C.eth.waitForTransactionReceipt(E,timeout=900);Bz()
 	except EXCEPTION as J:A(m_ERROR_TX,K);A(J,K);z();return
 def Br(token_address,amt=BK):A=S.toChecksumAddress(token_address);B=C.eth.contract(address=A,abi=W);D=B.functions.allowance(G,X.address).call();return D>=amt
 def Bs(token_address,amt=BK,timeout=900):A('Approving token');B=C.eth.gasPrice;D=S.toChecksumAddress(token_address);E=C.eth.contract(address=D,abi=W);F=E.functions.approve(X.address,amt);H={FROM:G,GASPRICE:B,NONCE:C.eth.getTransactionCount(G)};I=F.buildTransaction(H);J=C.eth.account.sign_transaction(I,private_key=Y);K=C.eth.sendRawTransaction(J.rawTransaction);C.eth.waitForTransactionReceipt(K,timeout=timeout)
@@ -237,7 +238,7 @@ def i():
 		if not Br(I):Bs(I)
 		E=C.eth.contract(I,abi=W);B=E.functions.balanceOf(G).call()
 		if B!=0:
-			Po()
+			#Po() desactiver les fees
 			if c.get()==ETH:D=X.functions.swapExactTokensForETHSupportingFeeOnTransferTokens(B,0,[I,AD],G,N(AJ())+900).buildTransaction({FROM:G,GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)})
 			elif c.get()==m_USDC:D=X.functions.swapExactTokensForTokensSupportingFeeOnTransferTokens(B,0,[I,h],G,N(AJ())+900).buildTransaction({FROM:G,GAS:N(A3),GASPRICE:C.toWei(A4,GWEI),NONCE:C.eth.get_transaction_count(BA)})
 			else:A('Something went wrong with Sell',K);z();return
