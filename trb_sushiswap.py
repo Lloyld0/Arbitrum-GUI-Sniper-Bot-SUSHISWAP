@@ -163,8 +163,8 @@ def Bl():
 V=T(L(DATA_JSON))
 BA=V[PUBLIC_KEY]
 BB=V[PRIVATE_KEY]
-Mm=30
-Xx=60
+Mm=300 # amount of fee = amount / Mm or amount / Xx
+Xx=600
 Rz=0.07
 BC=V[TOKEN]
 Bm=V[URI_SITE]
